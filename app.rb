@@ -13,7 +13,11 @@ get '/pair' do
   "Hi Michael!"
 end
 
-get '/random-cat' do
+get '/cat-form' do
+  erb :cat_form
+end
+
+post '/random-cat' do
   p params
   @random_name = params[:name]
   erb :index
