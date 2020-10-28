@@ -20,6 +20,12 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  get '/attack' do
+    @p1 = session[:p1].inspect
+    @p2 = session[:p2].inspect
+    erb :attack
+  end
+
 
 
   run! if app_file == $0
