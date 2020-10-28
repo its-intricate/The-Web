@@ -1,6 +1,7 @@
-RACK_ENV = 'test'
+ENV['RACK_ENV'] = 'test'
 #['../app.rb', '../capybara', '..app.rb', '../rspec'].each(&method(:require_relative))
-require_relative '../app'
+# require_relative '../app'
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
