@@ -8,10 +8,8 @@ RSpec.describe Player do
     expect(melissa.name).to eq 'Melissa'
   end
 
-  describe '#attack' do
-    it 'reduces player_2 points by 10' do
-      melissa.attack(esther)
-      expect(esther.hp).to eq 90
-    end
+  it 'gives default hit points' do
+    expect(melissa.hp).to eq Player::DEFAULT_POINTS
   end
+
 end
