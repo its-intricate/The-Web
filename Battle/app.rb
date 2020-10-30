@@ -1,24 +1,19 @@
 require 'sinatra/base'
-require 'player'
-require 'game'
+require_relative 'lib/player'
+require_relative 'lib/game'
 
 
 
 class Battle < Sinatra::Base
   enable :sessions
-  @p1 = $p1
-  @p2 = $p2
 
   get '/' do
     erb :index
   end
 
   get '/play' do
-    @p1_name = $p1.name
-    @p2_name = $p2.name
-    @p1_hp = $p1.hp
-    @p2_hp = $p2.hp
-    $game = Game.new($p1, $p2)
+    @p1 = $p1
+    @p2= $p2
     erb :play
   end
 
@@ -29,11 +24,9 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    @p1_name = $p1.name
-    @p2_name = $p2.name
-    $game.attack($p2)
-    @p1_hp = $p1.hp
-    @p2_hp = $p2.hp
+    @p1 = $p1
+    @p2 = $p2
+    Game.new.attack(@p2)
     erb :attack
   end
 

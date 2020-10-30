@@ -1,6 +1,7 @@
-<h1 style="color: #FF0000">Player 1: <%= @p1_name %></h1>
+<h1 style="color: #FF0000">Player 1: <%= @p1.name %></h1>
 <h3>is facing.........</h3>
-<h1 style="color: #0000FF">Player 2: <%= @p2_name %></h1>
-<h4 style="color: #008000"> <%= @p1_name %>: <%= @p1_hp %>/100 HP</h4>
-<h4 style="color: #008000"><%= @p2_name %>: <%= @p2_hp %>/100 HP</h4>
-<h5><%= @p1_name %> has attacked <%= @p2_name %>!</h5>
+<h1 style="color: #0000FF">Player 2: <%= @p2.name %></h1>
+<h4 style="color: #008000"> <%= @p1.name %>: <%= @p1.hp %>/100 HP</h4>
+<h4 style="color: #008000"><%= @p2.name %>: <%= @p2.hp %>/100 HP</h4>
+<h5><%= @p1.name %> has attacked <%= @p2.name %>!</h5>
+<h4><a href='/attack'>Attack!</a></h4>

@@ -12,4 +12,10 @@ RSpec.describe Player do
     expect(melissa.hp).to eq Player::DEFAULT_POINTS
   end
 
+  describe '#attack' do
+    it 'player receives damage' do
+      expect{ esther.receive_damage }.to change{ esther.hp }.by -10
+    end
+  end
+
 end

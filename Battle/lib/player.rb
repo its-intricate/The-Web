@@ -7,4 +7,8 @@ class Player
     @hp = DEFAULT_POINTS
   end
 
+  def receive_damage
+    @hp -= 10
+  end
+
 end
